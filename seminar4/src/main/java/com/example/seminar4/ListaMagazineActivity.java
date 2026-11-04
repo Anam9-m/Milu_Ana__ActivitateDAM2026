@@ -11,7 +11,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.List;
+
 public class ListaMagazineActivity extends AppCompatActivity {
+
+    private List<Magazin>magazine=null;
+  private int idModificat=0;
+  private MagazinAdapter adapter=null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

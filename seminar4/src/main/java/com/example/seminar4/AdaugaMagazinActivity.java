@@ -71,7 +71,7 @@ public class AdaugaMagazinActivity extends AppCompatActivity {
                     rbRating.getRating());
 
             Bundle bundle = new Bundle();
-            bundle.putSerializable("magazin", magazin);
+            bundle.putParcelable("magazin", magazin);
 
             Intent intent = new Intent();
             intent.putExtras(bundle);

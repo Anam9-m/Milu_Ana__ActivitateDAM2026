@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         launcher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
             if (result.getResultCode() == RESULT_OK && result.getData() != null) {
                 Bundle bundle = result.getData().getExtras();
-                Magazin magazin = (Magazin) bundle.getSerializable("magazin");
+                Magazin magazin = (Magazin) bundle.getParcelable("magazin");
                 magazine.add(magazin);
                 tvMagazin.setText(magazin.toString());
                 Toast.makeText(this, "Magazin adaugat in lista!", Toast.LENGTH_SHORT).show();
